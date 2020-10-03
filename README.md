@@ -1,0 +1,2 @@
+# GIGABYTE-B360M_AORUS_PRO-Hackintosh-OpenCore-EFI
+技嘉 B360M AORUS PRO / i7-8700 UHD630 / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
