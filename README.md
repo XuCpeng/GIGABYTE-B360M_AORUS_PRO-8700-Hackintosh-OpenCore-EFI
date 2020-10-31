@@ -34,6 +34,7 @@
 - DVMT Pre-Allocated(iGPU Memory): 64MB
 - SATA Mode: AHCI
 
+> boot item: BOOT/BOOTx64.efi
 ## 截图
 
 ![关于本机](images/../readme_images/关于本机.png)
