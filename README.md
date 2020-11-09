@@ -1,5 +1,5 @@
 # GIGABYTE-B360M_AORUS_PRO-8700-Hackintosh-OpenCore-EFI
-技嘉 B360M AORUS PRO / i7-8700 UHD630 / BigSur / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
+技嘉 B360M AORUS PRO / i7-8700 UHD630 / Big Sur / Catalina / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
 
 ## 硬件配置
 
@@ -9,6 +9,8 @@
 ![硬件参数](readme_images/硬件参数.png)
 
 ## 关闭或打开 SIP
+
+参考：[disabling-sip](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/post-issues.html#disabling-sip)
 
 通过设置`config.plist`中的`csr-active-config`来开启或关闭SIP，默认为`00000000`。
 
