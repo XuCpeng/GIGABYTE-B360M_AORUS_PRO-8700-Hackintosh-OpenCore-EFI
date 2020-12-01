@@ -73,9 +73,7 @@ csrutil authenticated-root disable
 
 ![图形卡显示器](images/../readme_images/图形卡显示器.png)
 
-![以太网卡](images/../readme_images/以太网卡.png)
-
-![音频](images/../readme_images/音频.png)
+![以太网卡](images/../readme_images/网络.png)
 
 ![Intel Power Gadget](images/../readme_images/Intel%20Power%20Gadget.png)
 
