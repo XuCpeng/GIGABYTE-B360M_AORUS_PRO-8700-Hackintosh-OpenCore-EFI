@@ -7,19 +7,11 @@
             <array>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-AWAC.aml</string>
+                    <string>SSDT-EC.aml</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
-                    <string>SSDT-AWAC.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string>SSDT-EC-USBX.aml</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-EC-USBX.aml</string>
+                    <string>SSDT-EC.aml</string>
                 </dict>
                 <dict>
                     <key>Comment</key>
@@ -36,6 +28,14 @@
                     <true/>
                     <key>Path</key>
                     <string>SSDT-PMC.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>SSDT-USBX.aml</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-USBX.aml</string>
                 </dict>
             </array>
             <key>Delete</key>
@@ -218,8 +218,6 @@
                 <dict>
                     <key>AAPL,ig-platform-id</key>
                     <data>BwCbPg==</data>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,2,0</string>
                     <key>device-id</key>
                     <data>mz4AAA==</data>
                     <key>device_type</key>
@@ -295,6 +293,24 @@
                     <key>Arch</key>
                     <string></string>
                     <key>BundlePath</key>
+                    <string>AirportItlwm.kext</string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string></string>
+                    <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
                     <string></string>
@@ -302,6 +318,42 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AppleALC</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string></string>
+                    <key>BundlePath</key>
+                    <string>IntelBluetoothFirmware.kext</string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/IntelBluetoothFirmware</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string></string>
+                    <key>BundlePath</key>
+                    <string>IntelBluetoothInjector.kext</string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -356,6 +408,42 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/NoTouchID</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string></string>
+                    <key>BundlePath</key>
+                    <string>SMCBatteryManager.kext</string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/SMCBatteryManager</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string></string>
+                    <key>BundlePath</key>
+                    <string>SMCLightSensor.kext</string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/SMCLightSensor</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -707,7 +795,7 @@
                 <key>TakeoffDelay</key>
                 <integer>0</integer>
                 <key>Timeout</key>
-                <integer>10</integer>
+                <integer>1</integer>
             </dict>
             <key>Debug</key>
             <dict>
@@ -743,6 +831,8 @@
                     <string>CustomOS</string>
                     <key>Path</key>
                     <string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
             </array>
             <key>Security</key>
@@ -755,8 +845,10 @@
                 <integer>0</integer>
                 <key>AuthRestart</key>
                 <false/>
+                <key>BlacklistAppleUpdate</key>
+                <false/>
                 <key>BootProtect</key>
-                <string>Bootstrap</string>
+                <string>None</string>
                 <key>DmgLoading</key>
                 <string>Signed</string>
                 <key>EnablePassword</key>
@@ -772,7 +864,7 @@
                 <key>ScanPolicy</key>
                 <integer>0</integer>
                 <key>SecureBootModel</key>
-                <string>Disabled</string>
+                <string>Default</string>
                 <key>Vault</key>
                 <string>Optional</string>
             </dict>
@@ -791,6 +883,10 @@
                     <string>OpenShell.efi</string>
                     <key>Path</key>
                     <string>OpenShell.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
             </array>
         </dict>
@@ -817,7 +913,7 @@
                     <key>boot-args</key>
                     <string>debug=0x100 keepsyms=1 alcid=1 -wegnoegpu</string>
                     <key>csr-active-config</key>
-                    <data>AAAAAA==</data>
+                    <data>/w8AAA==</data>
                     <key>prev-lang:kbd</key>
                     <string>en-US:0</string>
                     <key>run-efi-updater</key>
