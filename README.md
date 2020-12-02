@@ -2,6 +2,15 @@
 
 技嘉 B360M AORUS PRO / i7-8700 UHD630 / macOS 11.0 Big Sur / macOS 10.15 Catalina / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
 
+## 文件详情
+
+- `EFI`, 无AWAC，有Wifi和蓝牙，GIGABYTE B360M AORUS PRO 专用。
+- `EFI-AWAC`, 有一个通用AWAC，有Wifi和蓝牙。
+- `EFI-NoWifi`, 无AWAC，无Wifi和蓝牙，GIGABYTE B360M AORUS PRO 专用。
+- `EFI-AWAC-NoWifi`, 有一个通用AWAC，无Wifi和蓝牙。
+
+对于Wi-Fi和蓝牙，可以自己删除和添加kext，同时修改config.pdist。
+
 ## 硬件配置
 
 - 已通过启动参数`-wegnoegpu`屏蔽独显
