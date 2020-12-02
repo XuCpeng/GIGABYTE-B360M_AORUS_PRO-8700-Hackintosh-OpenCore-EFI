@@ -82,6 +82,8 @@ csrutil authenticated-root disable
 
 ![图形卡显示器](images/../readme_images/图形卡显示器.png)
 
+![UHD630 4K HEVC](images/../readme_images/UHD630%204K%20HEVC.png)
+
 ![以太网卡](images/../readme_images/网络.png)
 
 ![Intel Power Gadget](images/../readme_images/Intel%20Power%20Gadget.png)
