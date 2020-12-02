@@ -4,20 +4,19 @@
 
 ## 文件详情
 
-- `EFI`, 无AWAC，有Wifi和蓝牙，GIGABYTE B360M AORUS PRO 专用。
-- `EFI-AWAC`, 有一个通用AWAC，有Wifi和蓝牙。
-- `EFI-NoWifi`, 无AWAC，无Wifi和蓝牙，GIGABYTE B360M AORUS PRO 专用。
-- `EFI-AWAC-NoWifi`, 有一个通用AWAC，无Wifi和蓝牙。
+- `EFI`: 无AWAC，有Wifi和蓝牙，GIGABYTE B360M AORUS PRO 专用。
+- `EFI-AWAC`: 有一个通用AWAC，有Wifi和蓝牙。
+- `EFI-NoWifi`: 无AWAC，无Wifi和蓝牙，GIGABYTE B360M AORUS PRO 专用。
+- `EFI-AWAC-NoWifi`: 有一个通用AWAC，无Wifi和蓝牙。
 
-对于Wi-Fi和蓝牙，可以自己删除和添加kext，同时修改config.pdist。
+1. 使用AirportItlwm.kext支持CNvi无线网卡蓝牙, [详情](https://github.com/OpenIntelWireless/itlwm)。
+2. **为什么删除SSDT-AWAC.aml**：几乎网上所有教程都说300系主板一定需要该补丁，但我在`技嘉 B360M AORUS PRO`通过SSDTime发现其并没有AWAC时钟，不需要该补丁。而且更重要的是AWAC补丁会导致BIOS时间不更新，进而造成Win时间不走（非时区问题）。如果之前使用过AWAC，而且出现了win下时间不走的问题，只能扣主板电池重置BIOS。
+3. 通过删除config中的`PciRoot(0x0)/Pci(0x2,0x0)`下的`AAPL,slot-name`,实现了HD630 4k HEVC加速。
 
 ## 硬件配置
 
 - 已通过启动参数`-wegnoegpu`屏蔽独显
 - 强烈建议使用DP输出
-- 已使用AirportItlwm.kext支持CNvi无线网卡蓝牙,[详情](https://github.com/OpenIntelWireless/itlwm)
-- 已删除SSDT-AWAC.aml。几乎网上所有教程都说300系主板一定需要该补丁，但我在`技嘉 B360M AORUS PRO`通过SSDTime发现其并没有AWAC时钟，不需要该补丁。而且更重要的是AWAC补丁会导致BIOS时间不更新，进而造成Win时间不走（非时区问题）。如果之前使用过AWAC，而且出现了win下时间不走的问题，只能扣主板电池重置BIOS。
-- 通过删除config中的`PciRoot(0x0)/Pci(0x2,0x0)`下的`AAPL,slot-name`,实现了HD630 4k HEVC加速。
 
 ![硬件参数](readme_images/硬件参数.png)
 
