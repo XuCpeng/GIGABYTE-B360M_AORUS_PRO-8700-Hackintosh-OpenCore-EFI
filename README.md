@@ -20,6 +20,17 @@
 
 ![硬件参数](readme_images/硬件参数.png)
 
+- 引导： OC 0.6.3 最新
+- 系统： macOS 11 Big Sur
+- CPU： i7-8700 睿频正常
+- 集显：UHD630 2048MB 支持4k HEVC加速
+- 内存：4*8G 2666MHZ 正常
+- 有限网卡：正常
+- 无线网卡+蓝牙：AC9560 CNVi模块，正常
+- 音频：正常
+- USB：正常
+- 睡眠：正常
+
 ## BIOS 设置
 
 参考：[intel-bios-settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)
