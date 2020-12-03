@@ -18,7 +18,7 @@
 - 已通过启动参数`-wegnoegpu`屏蔽独显
 - 强烈建议使用DP输出
 
-![硬件参数](readme_images/硬件参数.png)
+---
 
 - 引导： OC 0.6.3 最新
 - 系统： macOS 11 Big Sur
@@ -30,6 +30,8 @@
 - 音频：正常
 - USB：正常
 - 睡眠：正常
+
+![硬件参数](readme_images/硬件参数.png)
 
 ## BIOS 设置
 
