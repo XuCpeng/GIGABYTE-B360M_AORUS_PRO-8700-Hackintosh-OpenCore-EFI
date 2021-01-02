@@ -88,6 +88,14 @@ csrutil disable
 csrutil authenticated-root disable
 ```
 
+## 关闭所有日志输出
+
+- Misc -> Debug -> AppleDebug = NO
+- Misc -> Debug -> ApplePanic = NO
+- Misc -> Debug -> DisableWatchDog = false
+- Misc -> Debug -> Target = 0
+- NVRAM -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args: 删除 `-v`
+
 ## 截图
 
 ![关于本机](images/../readme_images/关于本机.png)
