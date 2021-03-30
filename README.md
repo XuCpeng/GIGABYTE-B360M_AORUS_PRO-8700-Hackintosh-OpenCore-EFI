@@ -2,12 +2,17 @@
 
 技嘉 B360M AORUS PRO / i7-8700 UHD630 / macOS 11.0 Big Sur / macOS 10.15 Catalina / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
 
+## 使用方法
+从`configs`文件夹中选择合适的配置文件，并将其重命名为`config.pdist`，然后放入`EF/OC/`文件夹内即可。
+
 ## 文件详情
 
-- `EFI`: 无AWAC，有Wifi和蓝牙，GIGABYTE B360M AORUS PRO 专用。
-- `EFI-AWAC`: 有一个通用AWAC，有Wifi和蓝牙。
-- `EFI-NoWifi`: 无AWAC，无Wifi和蓝牙，GIGABYTE B360M AORUS PRO 专用。
-- `EFI-AWAC-NoWifi`: 有一个通用AWAC，无Wifi和蓝牙。
+- `config-WiFi-BT.plist`: 无AWAC补丁，有Wifi和蓝牙kext。默认为该配置文件。
+- `config-AWAC-WiFi-BT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext。
+- `config.plist`: 无AWAC补丁，无Wifi和蓝牙kext。
+- `config-AWAC.plist`: 有通用AWAC补丁，无Wifi和蓝牙kext。
+
+** 建议 GIGABYTE B360M AORUS PRO 使用“无AWAC补丁 ”的版本，原因如下文2。**
 
 1. 使用 [AirportItlwm.kext](https://github.com/OpenIntelWireless/itlwm) 和 [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) 来驱动CNVi无线网卡蓝牙模块 —— AC9560。
 2. **为什么删除SSDT-AWAC.aml**：几乎网上所有教程都说300系主板一定需要该补丁，但我在 `技嘉 B360M AORUS PRO` 通过SSDTime发现其并没有AWAC时钟，不需要该补丁。而且更重要的是AWAC补丁会导致BIOS时间不更新，进而造成Win时间不走（非时区问题）。如果之前使用过AWAC，而且出现了win下时间不走的问题，只能扣主板电池重置BIOS。
@@ -20,8 +25,8 @@
 
 ---
 
-- 引导： OC 0.6.4 最新
-- 系统： macOS 11 Big Sur
+- 引导： OpenCore-0.6.7-RELEASE
+- 系统： macOS 11。2.3 Big Sur
 - CPU： i7-8700 睿频正常
 - 集显：UHD630 2048MB 支持4k HEVC加速
 - 内存：4*8G 2666MHZ 正常
