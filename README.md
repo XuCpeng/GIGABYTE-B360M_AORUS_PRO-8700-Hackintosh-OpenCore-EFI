@@ -10,10 +10,10 @@
 
 ## 文件详情
 
-- `config-WiFi-BT.plist`: 无AWAC补丁，有Wifi和蓝牙kext。默认为该配置文件。
-- `config-AWAC-WiFi-BT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext。
+- `config-NoAWAC-WiFiBT.plist`: 无AWAC补丁，有Wifi和蓝牙kext。默认为该配置文件。
+- `config-AWAC-WiFiBT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext。
 - `config-NoAWAC-NoWiFiBT.plist`: 无AWAC补丁，无Wifi和蓝牙kext。
-- `config-AWAC.plist`: 有通用AWAC补丁，无Wifi和蓝牙kext。
+- `config-AWAC-NoWiFiBT.plist`: 有通用AWAC补丁，无Wifi和蓝牙kext。
 
 **建议 GIGABYTE B360M AORUS PRO 使用“无AWAC补丁 ”的版本，原因如下文2。**
 
