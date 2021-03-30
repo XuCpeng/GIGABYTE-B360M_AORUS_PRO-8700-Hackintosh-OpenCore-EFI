@@ -3,6 +3,7 @@
 技嘉 B360M AORUS PRO / i7-8700 UHD630 / macOS 11.0 Big Sur / macOS 10.15 Catalina / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
 
 ## 使用方法
+
 从`configs`文件夹中选择合适的配置文件，并将其重命名为`config.pdist`，然后放入`EFI/OC/`文件夹内替换即可。
 
 > OC最近几个版本的配置项变动非常频繁，有大量的增删，非常不建议直接把旧的config.pdist复制过来用。
@@ -11,7 +12,7 @@
 
 - `config-WiFi-BT.plist`: 无AWAC补丁，有Wifi和蓝牙kext。默认为该配置文件。
 - `config-AWAC-WiFi-BT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext。
-- `config.plist`: 无AWAC补丁，无Wifi和蓝牙kext。
+- `config-NoAWAC-NoWiFiBT.plist`: 无AWAC补丁，无Wifi和蓝牙kext。
 - `config-AWAC.plist`: 有通用AWAC补丁，无Wifi和蓝牙kext。
 
 **建议 GIGABYTE B360M AORUS PRO 使用“无AWAC补丁 ”的版本，原因如下文2。**
