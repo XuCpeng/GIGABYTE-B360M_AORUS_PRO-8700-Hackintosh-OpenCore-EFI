@@ -3,7 +3,9 @@
 技嘉 B360M AORUS PRO / i7-8700 UHD630 / macOS 11.0 Big Sur / macOS 10.15 Catalina / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
 
 ## 使用方法
-从`configs`文件夹中选择合适的配置文件，并将其重命名为`config.pdist`，然后放入`EF/OC/`文件夹内即可。
+从`configs`文件夹中选择合适的配置文件，并将其重命名为`config.pdist`，然后放入`EF/OC/`文件夹内替换即可。
+
+> OC最近几个版本的配置项变动非常频繁，有大量的增删，非常不建议直接把旧的config.pdist复制过来用。
 
 ## 文件详情
 
