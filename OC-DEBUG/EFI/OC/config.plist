@@ -1216,7 +1216,7 @@
 			<key>AppleBootPolicy</key>
 			<false/>
 			<key>AppleDebugLog</key>
-			<true/>
+			<false/>
 			<key>AppleEvent</key>
 			<false/>
 			<key>AppleFramebufferInfo</key>
