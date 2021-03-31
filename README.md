@@ -4,7 +4,12 @@
 
 ## 使用方法
 
-从`configs`文件夹中选择合适的配置文件，并将其重命名为`config.pdist`，然后放入`EFI/OC/`文件夹内替换即可。
+1. 选择使用DEBUG或RELEASE版本。
+
+- `OC-DEBUG` 文件夹内是opencore的DEBUG版本，配置文件中也全部打开了日志输出，建议初装系统或者出错时使用。缺点是启动极慢并且还会在ESP分区生成大量的日志文件。
+- `OC-RELEASE` 文件夹内是opencore的RELEASE版本，配置文件中关闭了日志输出，建议日常使用。
+
+2. 从`configs`文件夹中选择合适的配置文件，并将其重命名为`config.pdist`，然后放入`EFI/OC/`文件夹内替换即可。最终只需要使用`EFI`文件夹。
 
 > OC最近几个版本的配置项变动非常频繁，有大量的增删，非常不建议直接把旧的config.pdist复制过来用。
 
@@ -28,7 +33,7 @@
 
 ---
 
-- 引导： OpenCore-0.6.7-RELEASE
+- 引导： OpenCore-0.6.7
 - 系统： macOS 11。2.3 Big Sur
 - CPU： i7-8700 睿频正常
 - 集显：UHD630 2048MB 支持4k HEVC加速
