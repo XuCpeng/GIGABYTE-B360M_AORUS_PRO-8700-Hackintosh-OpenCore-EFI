@@ -4,22 +4,17 @@
 
 ## 使用方法
 
-1. 选择合适的配置文件，并将其重命名为 `config.pdist` 即可。
-2. 默认开启了日志输出，系统调试完成后可关闭日志:
-
-- 删除 `NVRAM->Add->7C436110-AB2A-4BBB-A880-FE41995C9F82->boot-args` 中的 `-v debug=0x100 keepsyms=1` 等.
-- `Misc->Debug->AppleDebug` 设为 `No`.
-- `Misc->Debug->ApplePanic` 设为 `No`.
-- `Misc->Debug->Target` 设为 `0`.
+1. 选择合适的pdist配置文件，并将其重命名为 `config.pdist` 即可
+2. 默认开启了日志输出，系统调试完成后可关闭日志（见文末）
 
 > OC最近几个版本的配置项变动非常频繁，有大量的增删，非常不建议直接把旧的config.pdist复制过来用。
 
 ## 文件详情
 
-- `config-NoAWAC-WiFiBT.plist`: 无AWAC补丁，有Wifi和蓝牙kext。默认为该配置文件。
-- `config-AWAC-WiFiBT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext。
-- `config-NoAWAC-NoWiFiBT.plist`: 无AWAC补丁，无Wifi和蓝牙kext。
-- `config-AWAC-NoWiFiBT.plist`: 有通用AWAC补丁，无Wifi和蓝牙kext。
+- `config-NoAWAC-WiFiBT.plist`: 无AWAC补丁，有Wifi和蓝牙kext（默认为该配置文件）
+- `config-AWAC-WiFiBT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext
+- `config-NoAWAC-NoWiFiBT.plist`: 无AWAC补丁，无Wifi和蓝牙kext
+- `config-AWAC-NoWiFiBT.plist`: 有通用AWAC补丁，无Wifi和蓝牙kext
 
 **建议 GIGABYTE B360M AORUS PRO 使用“无AWAC补丁 ”的版本，原因如下文2。**
 
@@ -29,7 +24,7 @@
 
 ## 硬件配置
 
-- 已通过启动参数`-wegnoegpu`屏蔽独显
+- 已通过启动参数`-wegnoegpu`屏蔽独显，只驱动核显，使用主板接口输出
 - 强烈建议使用DP输出
 
 ---
@@ -106,9 +101,8 @@ csrutil authenticated-root disable
 
 - Misc -> Debug -> AppleDebug = NO
 - Misc -> Debug -> ApplePanic = NO
-- Misc -> Debug -> DisableWatchDog = false
 - Misc -> Debug -> Target = 0
-- NVRAM -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args: 删除 `-v`
+- NVRAM -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args: 删除 `-v debug=0x100` 等参数
 
 ## 截图
 
