@@ -4,10 +4,10 @@
 
 ## 使用方法
 
+> 此EFI已尽量保持纯净，没有添加任何怪异的补丁，只添加必要的配置。OC最近几个版本的配置项变动非常频繁，有大量的增删，非常不建议直接把旧的config.pdist复制过来用。
+
 1. 从 `EFI/OC/` 文件夹中选择合适的配置文件并将其重命名为 `config.pdist` 即可
 2. 默认开启了日志输出，系统安装、调试完成后可关闭日志（见文末）
-
-> OC最近几个版本的配置项变动非常频繁，有大量的增删，非常不建议直接把旧的config.pdist复制过来用。
 
 ## 文件详情
 
@@ -30,9 +30,9 @@
 ---
 
 - 引导： OpenCore-0.6.7-RELEASE
-- 系统： macOS 11。2.3 Big Sur
+- 系统： macOS 11.2.3 Big Sur
 - CPU： i7-8700 睿频正常
-- 集显：UHD630 2048MB 支持4k HEVC加速
+- 集显：UHD630 1536MB 支持4k HEVC加速
 - 内存：4*8G 2666MHZ 正常
 - 有线网卡：正常
 - 无线网卡+蓝牙：AC9560 CNVi模块，正常
@@ -72,7 +72,31 @@
 
 > boot item: BOOT/BOOTx64.efi
 
-## 关闭或打开 SIP
+## 关闭 SIP 和 authenticated-root
+
+以下方法二选一
+
+### 1. 通过原生Recovery（推荐）
+
+从opencore的启动菜单中进入Recovery，打开实用工具-终端，执行下面两句命令：
+
+关闭SIP:
+
+```shell
+csrutil disable
+```
+
+关闭 authenticated-root：
+
+```shell
+csrutil authenticated-root disable
+```
+
+重启即可。
+
+### 2. 通过修改config.pdist（不推荐）
+
+若无法通过opencore启动菜单进入Recovery，可使用配置项关闭SIP，但无法关闭authenticated-root。
 
 参考：[disabling-sip](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/post-issues.html#disabling-sip)
 
@@ -87,15 +111,6 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> csr-active-config
 - `FF030000` - 关闭 High Sierra 的 SIP。 Disable all flags in macOS High Sierra (0x3ff).
 - `FF070000` - 关闭 Mojave 和 Catalina 的 SIP。Disable all flags in macOS Mojave and in macOS Catalina (0x7ff) as Apple introduced a value for executable policy.
 - `FF0F0000` - 关闭 Big Sur 的 SIP。Disable all flags in macOS Big Sur (0xfff) which has another new flag for authenticated root.
-
-### 若想创建系统启动快照，还需要关闭`authenticated-root`
-
-从opencore的启动菜单中进入Recovery，打开实用工具-终端，执行下面两句命令：
-
-```shell
-csrutil disable
-csrutil authenticated-root disable
-```
 
 ## 关闭所有日志输出
 
