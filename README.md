@@ -96,7 +96,7 @@ csrutil authenticated-root disable
 
 ### 2. 通过修改config.pdist（不推荐）
 
-若无法通过opencore启动菜单进入Recovery，可使用配置项关闭SIP，但无法关闭authenticated-root。
+若无法通过opencore启动菜单进入Recovery，可使用配置项关闭SIP，但**有可能**无法关闭authenticated-root。
 
 参考：[disabling-sip](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/post-issues.html#disabling-sip)
 
