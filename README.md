@@ -11,6 +11,8 @@
 
 ## 文件详情
 
+OC版本：OpenCore-0.6.7-RELEASE
+
 - `config-NoAWAC-WiFiBT.plist`: 无AWAC补丁，有Wifi和蓝牙kext（默认为该配置文件）
 - `config-AWAC-WiFiBT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext
 - `config-NoAWAC-NoWiFiBT.plist`: 无AWAC补丁，无Wifi和蓝牙kext
