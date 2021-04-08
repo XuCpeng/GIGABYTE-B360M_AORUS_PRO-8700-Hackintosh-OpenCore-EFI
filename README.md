@@ -74,7 +74,7 @@ OC版本：OpenCore-0.6.7-RELEASE
 
 > boot item: BOOT/BOOTx64.efi
 
-## 关闭 SIP 和 authenticated-root
+## 关闭 SIP 和 authenticated-root (可选)
 
 以下方法二选一
 
