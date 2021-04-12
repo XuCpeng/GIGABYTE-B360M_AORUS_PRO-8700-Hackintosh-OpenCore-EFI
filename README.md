@@ -4,14 +4,14 @@
 
 ## 使用方法
 
-> 此EFI已尽量保持纯净，没有添加任何怪异的补丁，只添加必要的配置。OC最近几个版本的配置项变动非常频繁，有大量的增删，非常不建议直接把旧的config.pdist复制过来用。
+> 此EFI已尽量保持纯净，删减了官方模版中大量无用的样例，没有添加任何怪异的补丁，只添加必要的配置。OC最近几个版本的配置项变动非常频繁，有许多配置项的增删，不建议直接把旧的config.pdist复制过来用。
 
 1. 从 `EFI/OC/` 文件夹中选择合适的配置文件并将其重命名为 `config.pdist` 即可
 2. 默认开启了日志输出，系统安装、调试完成后可关闭日志（见文末）
 
 ## 文件详情
 
-OC版本：OpenCore-0.6.7-RELEASE
+OC版本：OpenCore-0.6.8-RELEASE
 
 - `config-NoAWAC-WiFiBT.plist`: 无AWAC补丁，有Wifi和蓝牙kext（默认为该配置文件）
 - `config-AWAC-WiFiBT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext
