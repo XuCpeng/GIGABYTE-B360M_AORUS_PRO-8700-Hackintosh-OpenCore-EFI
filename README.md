@@ -11,7 +11,7 @@
 
 ## 文件详情
 
-OC版本：OpenCore-0.6.8-RELEASE
+OC版本：OpenCore-0.6.9-RELEASE
 
 - `config-NoAWAC-WiFiBT.plist`: 无AWAC补丁，有Wifi和蓝牙kext（默认为该配置文件）
 - `config-AWAC-WiFiBT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext
@@ -31,7 +31,7 @@ OC版本：OpenCore-0.6.8-RELEASE
 
 ---
 
-- 引导： OpenCore-0.6.7-RELEASE
+- 引导： OpenCore-0.6.9-RELEASE
 - 系统： macOS 11.2.3 Big Sur
 - CPU： i7-8700 睿频正常
 - 集显：UHD630 1536MB 支持4k HEVC加速
