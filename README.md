@@ -1,6 +1,6 @@
 # GIGABYTE-B360M_AORUS_PRO-8700-Hackintosh-OpenCore-EFI
 
-技嘉 B360M AORUS PRO / i7-8700 UHD630 / macOS 12 Monterey / macOS 10.15 Catalina / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
+技嘉 B360M AORUS PRO / i7-8700 UHD630 / macOS 12 Monterey / macOS 11 BigSur / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
 
 ## 更新
 
