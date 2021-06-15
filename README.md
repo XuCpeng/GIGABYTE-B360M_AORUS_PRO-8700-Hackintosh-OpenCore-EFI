@@ -4,9 +4,7 @@
 
 ## 更新
 
-已升级macOS 12 Monterey Beta，bug多到无法日常使用，最大的问题就是Wi-Fi和蓝牙，Wi-Fi的解决方法比较简单，使用Alpha版驱动即可，蓝牙的方案比较复杂，需要自编译多个kext（蓝牙可能是bug而非“特性”，可等待官方修复）。
-
-详见：[macOS 12 Monterey 驱动Wifi和蓝牙 AC9560](https://x.medemede.cn/archives/m-a-c-o-s--1-2--m-o-n-t-e-r-e-y--qu-dong-w-i-f-i-he-lan-ya--a-c-9-5-6-0)
+已升级 macOS 12 Monterey Beta，并且驱动 intel Wi-Fi和蓝牙 AC9560。详见：[macOS 12 Monterey 驱动Wifi和蓝牙 AC9560](https://x.medemede.cn/archives/m-a-c-o-s--1-2--m-o-n-t-e-r-e-y--qu-dong-w-i-f-i-he-lan-ya--a-c-9-5-6-0)
 
 以后主要更新适配 macOS 12。
 
@@ -16,12 +14,16 @@
 
 ### macOS 11 and lower
 
+OC版本：OC-0.6.9-RELEASE
+
 1. 从 `EFI/OC/` 文件夹中选择合适的配置文件并将其重命名为 `config.pdist` 即可
 2. 默认开启了日志输出，系统安装、调试完成后可关闭日志（见文末）
 
 ### macOS 12
 
-**不建议日常使用！**
+暂时不建议日常使用！
+
+OC版本：OC-0.7.0-RELEASE
 
 因为涉及多个Kext的变化，所以从上个版本的EFI中独立了出来，不再提供多个版本的config，请按需手动修改：
 
@@ -30,8 +32,6 @@
 - 若不需要蓝牙BT，则删除 BlueToolFixup.kext和IntelBluetoothFirmware.kext，并删除config中相应的配置
 
 ## 文件详情
-
-OC版本：OpenCore-0.6.9-RELEASE
 
 - `config-NoAWAC-WiFiBT.plist`: 无AWAC补丁，有Wifi和蓝牙kext（默认为该配置文件）
 - `config-AWAC-WiFiBT.plist`: 有通用AWAC补丁，有Wifi和蓝牙kext
@@ -51,7 +51,7 @@ OC版本：OpenCore-0.6.9-RELEASE
 
 ---
 
-- 引导： OpenCore-0.6.9-RELEASE
+- 引导： OpenCore RELEASE
 - 系统： macOS 11.2.3 Big Sur
 - CPU： i7-8700 睿频正常
 - 集显：UHD630 1536MB 支持4k HEVC加速
