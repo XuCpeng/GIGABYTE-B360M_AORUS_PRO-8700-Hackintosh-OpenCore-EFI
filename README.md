@@ -30,6 +30,7 @@ OC版本：OC-0.7.0-RELEASE
 - 若需要AWAC补丁，则将 ACPI->Add->SSDT-AWAC-DISABLE.aml->Enabled 设为true
 - 若不需要Wifi，则删除 AirportItlwm.kext，并删除config中的相应配置
 - 若不需要蓝牙BT，则删除 BlueToolFixup.kext和IntelBluetoothFirmware.kext，并删除config中相应的配置
+- 默认开启了日志输出，系统安装、调试完成后可关闭日志（见文末）
 
 ## 文件详情
 
