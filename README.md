@@ -1,13 +1,33 @@
 # GIGABYTE-B360M_AORUS_PRO-8700-Hackintosh-OpenCore-EFI
 
-技嘉 B360M AORUS PRO / i7-8700 UHD630 / macOS 11.0 Big Sur / macOS 10.15 Catalina / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
+技嘉 B360M AORUS PRO / i7-8700 UHD630 / macOS 12 Monterey / macOS 10.15 Catalina / 黑苹果 OpenCore EFI / GIGABYTE B360M AORUS PRO Hackintosh OpenCore EFI
+
+## 更新
+
+已升级macOS 12 Monterey Beta，bug多到无法日常使用，最大的问题就是Wi-Fi和蓝牙，Wi-Fi的解决方法比较简单，使用Alpha版驱动即可，蓝牙的方案比较复杂，需要自编译多个kext（蓝牙可能是bug而非“特性”，可等待官方修复）。
+
+详见：[macOS 12 Monterey 驱动Wifi和蓝牙 AC9560](https://x.medemede.cn/archives/m-a-c-o-s--1-2--m-o-n-t-e-r-e-y--qu-dong-w-i-f-i-he-lan-ya--a-c-9-5-6-0)
+
+以后主要更新适配 macOS 12。
 
 ## 使用方法
 
-> 此EFI已尽量保持纯净，删减了官方模版中大量无用的样例，没有添加任何怪异的补丁，只添加必要的配置。OC最近几个版本的配置项变动非常频繁，有许多配置项的增删，不建议直接把旧的config.pdist复制过来用。
+此EFI已尽量保持纯净，删减了官方模版中大量无用的样例，没有添加任何怪异的补丁，只添加必要的配置。OC最近几个版本的配置项变动非常频繁，有许多配置项的增删，不建议直接把旧的config.pdist复制过来用。
+
+### macOS 11 and lower
 
 1. 从 `EFI/OC/` 文件夹中选择合适的配置文件并将其重命名为 `config.pdist` 即可
 2. 默认开启了日志输出，系统安装、调试完成后可关闭日志（见文末）
+
+### macOS 12
+
+**不建议日常使用！**
+
+因为涉及多个Kext的变化，所以从上个版本的EFI中独立了出来，不再提供多个版本的config，请按需手动修改：
+
+- 若需要AWAC补丁，则将 ACPI->Add->SSDT-AWAC-DISABLE.aml->Enabled 设为true
+- 若不需要Wifi，则删除 AirportItlwm.kext，并删除config中的相应配置
+- 若不需要蓝牙BT，则删除 BlueToolFixup.kext和IntelBluetoothFirmware.kext，并删除config中相应的配置
 
 ## 文件详情
 
@@ -123,7 +143,7 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> csr-active-config
 
 ## 截图
 
-![关于本机](images/../readme_images/关于本机.png)
+![关于本机](images/../readme_images/macOS12.png)
 
 ![图形卡显示器](images/../readme_images/图形卡显示器.png)
 
