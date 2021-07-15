@@ -50,7 +50,7 @@ OC版本：OC-0.7.0-RELEASE
 - 已通过启动参数`-wegnoegpu`**屏蔽独显，只驱动核显，使用主板接口输出**
 - 强烈建议**使用DP输出**
 - 引导： OpenCore RELEASE
-- 系统： macOS 12 Monterey
+- 系统： macOS 12.0 Monterey Beta 3 (21A5284e)
 - CPU： i7-8700 睿频正常
 - 集显：UHD630 1536MB 支持4k ~~HEVC加速~~(VideoProc在Monterey中崩溃无法打开)
 - 内存：4*8G 2666MHZ 正常
@@ -99,7 +99,7 @@ OC版本：OC-0.7.0-RELEASE
 - Misc -> Debug -> AppleDebug = NO
 - Misc -> Debug -> ApplePanic = NO
 - Misc -> Debug -> Target = 0
-- NVRAM -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args: 删除 `-v debug=0x100` 等参数
+- NVRAM -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args: 删除 `-v keepsyms=1 debug=0x12a msgbuf=1048576` 等参数
 
 ## 截图
 
