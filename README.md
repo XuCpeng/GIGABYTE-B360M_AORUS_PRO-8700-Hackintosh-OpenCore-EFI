@@ -23,7 +23,7 @@ OC版本：OC-0.6.9-RELEASE
 
 macOS 12 暂时不建议日常使用！此EFI也适用于macOS 11，但macOS 11的EFI不适用 macOS12。
 
-OC版本：OC-0.7.1-RELEASE
+OC版本：OC-0.7.2-RELEASE
 
 因为涉及多个Kext的变化，所以从上个版本的EFI中独立了出来，不再提供多个版本的config，请按需手动修改：
 
