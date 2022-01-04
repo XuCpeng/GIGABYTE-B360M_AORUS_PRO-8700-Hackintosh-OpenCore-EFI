@@ -30,7 +30,7 @@
 - 引导： OpenCore RELEASE
 - 系统： macOS 12.2 Monterey Beta (21D5025f)
 - CPU： i7-8700 睿频正常
-- 集显：UHD630 1536MB 支持4k ~~HEVC加速~~(VideoProc在Monterey中崩溃无法打开)
+- 集显：UHD630 1536MB 支持4k HEVC加速
 - 内存：4*8G 2666MHZ 正常
 - 有线网卡：正常
 - 无线网卡+蓝牙：AC9560 CNVi模块，正常
