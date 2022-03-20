@@ -15,7 +15,7 @@
 - 若不需要蓝牙BT，则删除 BlueToolFixup.kext 和 IntelBluetoothFirmware.kext，并删除 `Kernel->Add` 下相应的配置；
 - 默认开启了日志输出，系统安装、调试完成后可关闭日志（见文末）。
 
-**EFI macOS 12：** OC-0.7.8-RELEASE，适配 macOS 12.3 Monterey Beta (21E5222a)。此 EFI 应该也适用于 macOS 11，但 macOS 11 的 EFI 不适用 macOS12。
+**EFI macOS 12：** OC-0.7.9-RELEASE，适配 macOS 12.3 Monterey。此 EFI 应该也适用于 macOS 11，但 macOS 11 的 EFI 不适用 macOS 12。
 
 **macOS 11 and lower：** OC-0.6.9-RELEASE，适配 macOS 11。
 
@@ -25,10 +25,10 @@
 
 ## 硬件配置
 
-- 已通过启动参数`-wegnoegpu`**屏蔽独显，只驱动核显，使用主板接口输出**
+- 已通过启动参数 `-wegnoegpu` **屏蔽独显，只驱动核显，使用主板接口输出**
 - 强烈建议**使用DP输出**
 - 引导： OpenCore RELEASE
-- 系统： macOS 12.3 Monterey Beta (21E5222a)
+- 系统： macOS 12.3 Monterey
 - CPU： i7-8700 睿频正常
 - 集显：UHD630 1536MB 支持4k HEVC加速
 - 内存：4*8G 2666MHZ 正常
