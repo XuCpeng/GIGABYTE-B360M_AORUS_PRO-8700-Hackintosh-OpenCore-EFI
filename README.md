@@ -15,7 +15,7 @@
 - 若不需要蓝牙BT，则删除 BlueToolFixup.kext 和 IntelBluetoothFirmware.kext，并删除 `Kernel->Add` 下相应的配置；
 - 默认开启了日志输出，系统安装、调试完成后可关闭日志（见文末）。
 
-**EFI macOS 12：** OC-0.8.0-RELEASE，适配 macOS 12.3 Monterey。此 EFI 应该也适用于 macOS 11，但 macOS 11 的 EFI 不适用 macOS 12。
+**EFI macOS 12：** OC-0.8.1-RELEASE，适配 macOS 12.3 Monterey。此 EFI 应该也适用于 macOS 11，但 macOS 11 的 EFI 不适用 macOS 12。
 
 **macOS 11 and lower：** OC-0.6.9-RELEASE，适配 macOS 11。
 
